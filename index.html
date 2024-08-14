@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240813214249">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240815010309">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240815010309" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -65,7 +65,7 @@
 				</a>
 				<div class="header__col">
 					<a href="tel:+79275116070" class="header__tel">+7(927)511-60-70</a>
-					<button type="submit" class="button">Заказать звонок</button>
+					<button type="submit" class="button btn2">Заказать звонок</button>
 					<a href="#"><i class="_icon-vk"></i></a>
 
 				</div>
@@ -112,7 +112,69 @@
 						</ul>
 					</div>
 					<text class="_icon-binokol">У вас в распоряжении будет бинокль/телескоп для более детального осмотра города</text>
-					<div class="vid-fon-back"></div>
+					<div class="">
+						<div class="vid-fon-back"></div>
+						<div class="vid-fon-back__btn">
+							<button type="submit" class="vid-fon-back__button ">
+								<i class="ri-sun-line"></i>
+								<i class="ri-moon-fill"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="video">
+				<div class="video__container">
+					<span>Для соц сетей</span>
+					<h2>Каждому клиенту видео</h2>
+					<p>Для каждого клиента мы снимаем коротки 10-20 секундный ролик на iphone 15 pro для дальнейшего размещения в социальных сетях.</p>
+					<!-- Оболочка слайдера -->
+					<div class="viddeo__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="viddeo__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="viddeo__slide swiper-slide">
+								<div class="video__block">
+									<video autoplay muted loop class="video__col">
+										<source src="your-video.mp4" type="video/mp4">
+									</video>
+									<div class="play">
+										<button type="submit" class="play__icon">
+											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="viddeo__slide swiper-slide">
+								<div class="video__block video__block-two">
+									<video autoplay muted loop class="video__col">
+										<source src="your-video.mp4" type="video/mp4">
+									</video>
+									<div class="play">
+										<button type="submit" class="play__icon">
+											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+										</button>
+
+									</div>
+								</div>
+							</div>
+							<div class="viddeo__slide swiper-slide">
+								<div class="video__block video__block-free">
+									<video autoplay muted loop class="video__col">
+										<source src="your-video.mp4" type="video/mp4">
+									</video>
+									<div class="play">
+										<button type="submit" class="play__icon">
+											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+										</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="swiper-button-prev swiper-button-prev-two  _icon-arrow"></button>
+						<button type="button" class="swiper-button-next swiper-button-next-two _icon-arrow"></button>
+					</div>
 				</div>
 			</section>
 			<section class="photo">
@@ -203,6 +265,119 @@
 					</div>
 				</div>
 			</section>
+			<section class="tarif">
+				<div class="tarif__container">
+					<h2>Выбери нужный тариф</h2>
+					<div class="tarif__block">
+						<div class="tarif__col">
+							<h3>ЛАЙТ</h3>
+							<h4>4990₽</h4>
+							<p>Продолжительность 30 минут</p>
+							<p>Романтическая обстановка</p>
+							<p>Cтол со свечами Музыка(bluetooth колонка) Пледы</p>
+							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+							<p>Подарок бутылочка игристого (Советское)</p>
+							<button type="submit" class="button">Забронировать</button>
+						</div>
+						<div class="tarif__col">
+							<h3>Стандарт</h3>
+							<h4>7990₽</h4>
+							<p>Продолжительность 45 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+							<p>Романтическая обстановка</p>
+							<p>Cтол со свечами Музыка Пледы</p>
+							<p> Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+							<p>Подарок бутылочка игристого (Российское)</p>
+							<button type="submit" class="button">Забронировать</button>
+						</div>
+						<div class="tarif__col">
+							<h3>Стандарт+</h3>
+							<h4>8990₽</h4>
+							<p>Продолжительность 60 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+							<p>Романтическая обстановка</p>
+							<p>Cтол со свечами Музыка</p>
+							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+							<p>Подарок бутылочка игристого (Абрау Дюрсо)</p>
+							<p>На случай если будет прохладно у нас есть пледы</p>
+							<button type="submit" class="button">Забронировать</button>
+						</div>
+						<div class="tarif__col">
+							<h3>VIP I</h3>
+							<h4>12990₽</h4>
+							<p>Продолжительность 90 минут 20 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+							<p>Романтическая обстановка</p>
+							<p>Cтол со свечами Живая музыка (саксафон/скрипка/виоланчель 60 минут)</p>
+							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+							<p>Подарок бутылочка игристого (Абрау Дюрсо или Bosco)</p>
+							<button type="submit" class="button">Забронировать</button>
+						</div>
+						<div class="tarif__col">
+							<h3>VIP II</h3>
+							<h4>25990₽</h4>
+							<p>Продолжительность 120 минут
+							<div class="tip__p">30 минут фотосессия с профессиональным фотографом (25-40 фотографий)</div>
+							<div class="tip__p">Видео сьемка (1-3 минутный фильм)</div>
+							</p>
+							<p> Романтическая обстановка</p>
+							<p>Cтол со свечами
+							<div class="tip__p">Живая музыка (саксафон/скрипка/виоланчель 60 минут)</div>
+							</p>
+							<p>Роллы «Филадельфия»
+							<div class="tip__p">Горячий чай</div>
+							<div class="tip__p">Конфеты из бельгийского шоколада ручной работы</div>
+							</p>
+							<p>Подарок бутылочка игристого (Prosecco)</p>
+							<button type="submit" class="button">Забронировать</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="comand">
+				<div class="comand__container">
+					<span>Немного о нас</span>
+					<h2>Наша команда</h2>
+					<!-- Оболочка слайдера -->
+					<div class="comand__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="comand__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="comand__slide swiper-slide">
+								<div class="comand__block">
+									<div class="comand__block-img">
+										<picture><source srcset="img/comand/4.webp" type="image/webp"><img src="img/comand/4.png" alt=""></picture>
+									</div>
+									<div class="comand__block-info">
+										<p>Должность</p>
+										<h4>Имя Фамилия</h4>
+									</div>
+								</div>
+							</div>
+							<div class="имя-блока__slide swiper-slide">
+								<div class="comand__block">
+									<div class="comand__block-img comand__block-img__two">
+										<picture><source srcset="img/comand/5.webp" type="image/webp"><img src="img/comand/5.png" alt=""></picture>
+									</div>
+									<div class="comand__block-info">
+										<p>Должность</p>
+										<h4>Имя Фамилия</h4>
+									</div>
+								</div>
+							</div>
+							<div class="имя-блока__slide swiper-slide">
+								<div class="comand__block">
+									<div class="comand__block-img">
+										<picture><source srcset="img/comand/6.webp" type="image/webp"><img src="img/comand/6.png" alt=""></picture>
+									</div>
+									<div class="comand__block-info">
+										<p>Должность</p>
+										<h4>Имя Фамилия</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
 			<section class="vopros">
 				<div class="vopros__container">
 					<span>у вас возник вопрос?</span>
@@ -260,31 +435,115 @@
 						</div>
 
 					</div>
+					<div class="vopros__cart">
+						<h3 class="h3-white">Остались вопросы?</h3>
+						<button type="submit" class="button btn2">Получить консультацию</button>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-
+				<div class="footer__hd"></div>
+				<a href="" class="footer__logo" data-da=".footer__hd,1003"><picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture></a>
+				<nav class="menu__body" data-da=".footer__hd,1003">
+					<h4>Навигация</h4>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<div data-spollers data-one-spoller class="spollers">
+								<div class="spollers__item">
+									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
+									<div class="spollers__body">
+										<div>
+											<a href="">Гендер пати</a>
+											<a href="">Иглу на крыше</a>
+											<a href="">Аренда инвентаря</a>
+											<a href="">Свидание на крыше</a>
+										</div>
+									</div>
+								</div>
+								<div class="spollers__item">
+									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
+									<div class="spollers__body">
+										<div>
+											<a href="">Гендер пати</a>
+											<a href="">Иглу на крыше</a>
+											<a href="">Аренда инвентаря</a>
+											<a href="">Свидание на крыше</a>
+											<a href="">Свидание в кинотеатре</a>
+											<a href="">Предложение руки и сердца </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="menu__item menu__item-hd">
+							<a href="">Услуги</a>
+						</li>
+						<li class="menu__item menu__item-hd">
+							<a href="">Мероприятия</a>
+						</li>
+						<li class="menu__item">
+							<a href="">Фото</a>
+						</li>
+						<li class="menu__item">
+							<a href="">Франшиза</a>
+						</li>
+						<li class="menu__item">
+							<a href="">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer__soc">
+					<a href="" class="_icon-youtube"></a>
+					<a href="" class="_icon-insta"></a>
+					<a href="" class="_icon-vk"></a>
+				</div>
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<img src="img/close.svg" alt="">
-			</button>
-			<div class="popup__text">
-				<h2>Получи бесплатную доставку!</h2>
-				<p>Дополни корзину до 4 000 рублей
-					и доставка станет бесплатной!</p>
-				<button type="submit" class="button-dop">Подробнее</button>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="otpravka__form">
+					<button type="submit" data-close class="close-button">
+						<i class="ri-close-line"></i>
+					</button>
+					<form>
+						<h3>Вы можете оставить заявку на обратный звонок</h3>
+						<label for="tel">Имя</label>
+						<input type="name" name="form[name]" placeholder="Введите ваше имя" class="input">
+
+						<label for="tel">Телефон</label>
+						<input type="tel" name="form[tel]" placeholder="Введите ваш номер телефона" class="input">
+
+						<label class="checkbox checkbox__block">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__custom">
+								<i class="ri-check-line"></i>
+							</span>
+							<p>Принимаю условия политики конфиденциальности</p>
+						</label>
+						<button data-popup="#popup2" type="submit" class="button">Отправить заявку</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20240813214249"></script>
+
+	<div id="popup2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="otpravka__form otpravka__form-two">
+					<button type="submit" data-close class="close-button">
+						<i class="ri-close-line"></i>
+					</button>
+					<p>Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240815010309"></script>
 </body>
 
 </html>
