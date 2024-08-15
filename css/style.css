@@ -405,7 +405,7 @@ body::after {
      object-fit: contain;
 }
 
-span {
+.span {
   color: #000;
   text-align: center;
   -webkit-box-align: center;
@@ -414,22 +414,40 @@ span {
   display: block;
   text-transform: uppercase;
 }
+@media (max-width: 47.99875em) {
+  .span {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .span-no {
+    text-align: start;
+    display: block;
+  }
+}
 
 h2 {
   line-height: 1.2291666667;
   color: #000;
   margin-bottom: 40px;
   text-align: center;
+  word-break: break-all;
   font-weight: 600;
 }
-@supports (font-size: clamp( 1.375rem , 0.7840909091rem  +  2.9545454545vw , 3rem )) {
+@supports (font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3rem )) {
   h2 {
-    font-size: clamp( 1.375rem , 0.7840909091rem  +  2.9545454545vw , 3rem );
+    font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3rem );
   }
 }
-@supports not (font-size: clamp( 1.375rem , 0.7840909091rem  +  2.9545454545vw , 3rem )) {
+@supports not (font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3rem )) {
   h2 {
-    font-size: calc(1.375rem + 1.625 * (100vw - 20rem) / 55);
+    font-size: calc(2rem + 1 * (100vw - 20rem) / 55);
+  }
+}
+@media (max-width: 47.99875em) {
+  h2 {
+    text-align: start;
   }
 }
 
@@ -1070,6 +1088,10 @@ h2 {
 .vid text::before {
   color: #A22929;
   font-style: 15px;
+}
+
+.vid__slider {
+  margin-bottom: 1.875rem;
 }
 
 .vid-fon-back {
@@ -2059,6 +2081,11 @@ h2 {
   .swiper-button-otsiv {
     display: none;
   }
+  .main__container {
+    text-align: center;
+  }
+  .no-webp .main{
+    background-image: url("..//img/main-main.png"); }
 }
 @media (max-width: 61.99875em) {
   .vid-cart {
@@ -2201,13 +2228,16 @@ h2 {
 }
 @media (max-width: 29.99875em) {
   .main h1 {
-    padding-top: 2.5625rem;
+    padding-top: 7.375rem;
   }
   .main {
-    padding: 0 0 64px 0;
+    padding: 0 0 138px 0;
   }
   .vopros__container .spollers button p {
     max-width: 262px;
+  }
+  .header .header__menu {
+    margin-top: 60px;
   }
 }
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -3232,3 +3262,7 @@ button.swiper-pagination-bullet {
 .webp .video__block-two{ background-image: url(..//img/video/2.webp); }
 
 .webp .video__block-free{ background-image: url(..//img/video/3.webp); }
+
+@media (max-width: 47.99875em){
+  .webp .main{ background-image: url(..//img/main-main.webp); }
+}
