@@ -4090,42 +4090,6 @@
         });
     }
     if (document.querySelector(".swiper")) {
-        new core(".otsiv__slider", {
-            modules: [ Navigation, Pagination, Autoplay ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 0,
-            autoHeight: true,
-            speed: 800,
-            centeredSlides: true,
-            loop: true,
-            effect: "fade",
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    autoHeight: true
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                },
-                1100: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                }
-            },
-            on: {}
-        });
         new core(".comand__slider", {
             modules: [ Navigation, Pagination, Autoplay ],
             observer: true,
@@ -4157,7 +4121,37 @@
             },
             on: {}
         });
-        new core(".viddeo__slider", {
+        new core(".tarif__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 5,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    centeredSlides: true
+                },
+                1101: {
+                    slidesPerView: 5,
+                    spaceBetween: 0
+                }
+            },
+            on: {}
+        });
+        new core(".otsiv__slider", {
             modules: [ Navigation, Pagination, Autoplay ],
             observer: true,
             observeParents: true,
@@ -4167,7 +4161,15 @@
             speed: 800,
             centeredSlides: true,
             loop: true,
-            initialSlide: 1,
+            effect: "fade",
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false
+            },
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
@@ -4180,7 +4182,81 @@
                 },
                 768: {
                     slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    navigation: false
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+            on: {}
+        });
+        new core(".vibor__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 2,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
                     spaceBetween: 0
+                },
+                1100: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                }
+            },
+            on: {}
+        });
+        new core(".viddeo__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            centeredSlides: true,
+            loop: true,
+            initialSlide: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    }
                 },
                 1180: {
                     slidesPerView: 3,
@@ -4189,6 +4265,89 @@
             },
             on: {}
         });
+        new core(".vid__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        type: "bullets"
+                    },
+                    renderBullet: function(index, className) {
+                        if (index < this.slidesPerView) return `<span class="${className} swiper-pagination-bullet-active"></span>`;
+                        return `<span class="${className}"></span>`;
+                    }
+                },
+                1180: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                }
+            },
+            on: {
+                slideChange: function() {
+                    updatePagination(this);
+                }
+            }
+        });
+        new core(".comand__slider-two", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            centeredSlides: true,
+            initialSlide: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 0
+                }
+            },
+            on: {}
+        });
+    }
+    function updatePagination(swiper) {
+        const totalSlides = swiper.pagination.bullets.length;
+        const visibleSlides = swiper.params.slidesPerView;
+        swiper.pagination.bullets.forEach((bullet => bullet.classList.remove("swiper-pagination-bullet-active")));
+        for (let i = 0; i < visibleSlides; i++) if (swiper.realIndex + i < totalSlides) swiper.pagination.bullets[swiper.realIndex + i].classList.add("swiper-pagination-bullet-active");
     }
     window.addEventListener("load", (function(e) {
         initSliders();

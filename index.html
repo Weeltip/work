@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240815010309">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240815221001">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240815010309" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240815221001" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -63,7 +63,7 @@
 				<a href="" class="logo">
 					<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
 				</a>
-				<div class="header__col">
+				<div data-da=".menu__body,992,2" class="header__col">
 					<a href="tel:+79275116070" class="header__tel">+7(927)511-60-70</a>
 					<button type="submit" class="button btn2">Заказать звонок</button>
 					<a href="#"><i class="_icon-vk"></i></a>
@@ -85,31 +85,50 @@
 					<picture><source srcset="img/vid-main.webp" type="image/webp"><img class="vid-main" src="img/vid-main.png" alt=""></picture>
 					<span>Уникальный вид</span>
 					<h2>Все достопримечательности Волгограда</h2>
-					<div class="vid-cart">
-						<ul>
-							<div class=""><picture><source srcset="img/vid/1.webp" type="image/webp"><img src="img/vid/1.png" alt=""></picture></div>
-							<p>Мамаев Курган</p>
-						</ul>
-						<ul>
-							<div class=""><picture><source srcset="img/vid/2.webp" type="image/webp"><img src="img/vid/2.png" alt=""></picture></div>
-							<p>Мост</p>
-						</ul>
-						<ul>
-							<div class=""><picture><source srcset="img/vid/3.webp" type="image/webp"><img class="most" src="img/vid/3.png" alt=""></picture></div>
-							<p>Река Волга</p>
-						</ul>
-						<ul>
-							<div class=""><picture><source srcset="img/vid/4.webp" type="image/webp"><img src="img/vid/4.png" alt=""></picture></div>
-							<p>Стадион</p>
-						</ul>
-						<ul>
-							<div class=""><picture><source srcset="img/vid/5.webp" type="image/webp"><img src="img/vid/5.png" alt=""></picture></div>
-							<p>Центр города</p>
-						</ul>
-						<ul>
-							<div class=""><picture><source srcset="img/vid/6.webp" type="image/webp"><img src="img/vid/6.png" alt=""></picture></div>
-							<p>Церковь</p>
-						</ul>
+					<!-- Оболочка слайдера -->
+					<div class="vid__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="vid__wrapper swiper-wrapper vid-cart">
+							<!-- Слайд -->
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/1.webp" type="image/webp"><img src="img/vid/1.png" alt=""></picture></div>
+									<p>Мамаев Курган</p>
+								</ul>
+							</div>
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/2.webp" type="image/webp"><img src="img/vid/2.png" alt=""></picture></div>
+									<p>Мост</p>
+								</ul>
+							</div>
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/3.webp" type="image/webp"><img class="most" src="img/vid/3.png" alt=""></picture></div>
+									<p>Река Волга</p>
+								</ul>
+							</div>
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/4.webp" type="image/webp"><img src="img/vid/4.png" alt=""></picture></div>
+									<p>Стадион</p>
+								</ul>
+							</div>
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/5.webp" type="image/webp"><img src="img/vid/5.png" alt=""></picture></div>
+									<p>Центр города</p>
+								</ul>
+							</div>
+							<div class="vid__slide swiper-slide">
+								<ul>
+									<div class=""><picture><source srcset="img/vid/6.webp" type="image/webp"><img src="img/vid/6.png" alt=""></picture></div>
+									<p>Церковь</p>
+								</ul>
+							</div>
+						</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-pagination"></div>
 					</div>
 					<text class="_icon-binokol">У вас в распоряжении будет бинокль/телескоп для более детального осмотра города</text>
 					<div class="">
@@ -174,6 +193,7 @@
 						</div>
 						<button type="button" class="swiper-button-prev swiper-button-prev-two  _icon-arrow"></button>
 						<button type="button" class="swiper-button-next swiper-button-next-two _icon-arrow"></button>
+						<div class="swiper-pagination "></div>
 					</div>
 				</div>
 			</section>
@@ -182,20 +202,25 @@
 					<span>Профессиональный фотограф</span>
 					<h2>Профессианольные фотографии</h2>
 					<div class="photo__col">
-						<div class=""><picture><source srcset="img/photo/1.webp" type="image/webp"><img src="img/photo/1.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/2.webp" type="image/webp"><img src="img/photo/2.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/3.webp" type="image/webp"><img src="img/photo/3.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/4.webp" type="image/webp"><img src="img/photo/4.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/5.webp" type="image/webp"><img src="img/photo/5.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/6.webp" type="image/webp"><img src="img/photo/6.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/7.webp" type="image/webp"><img src="img/photo/7.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/8.webp" type="image/webp"><img src="img/photo/8.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/9.webp" type="image/webp"><img src="img/photo/9.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/10.webp" type="image/webp"><img src="img/photo/10.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/11.webp" type="image/webp"><img src="img/photo/11.png" alt=""></picture></div>
-						<div class=""><picture><source srcset="img/photo/12.webp" type="image/webp"><img src="img/photo/12.png" alt=""></picture></div>
+						<div class="photo__col-dn">
+							<div class=""><picture><source srcset="img/photo/1.webp" type="image/webp"><img src="img/photo/1.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/2.webp" type="image/webp"><img src="img/photo/2.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/3.webp" type="image/webp"><img src="img/photo/3.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/4.webp" type="image/webp"><img src="img/photo/4.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/5.webp" type="image/webp"><img src="img/photo/5.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/6.webp" type="image/webp"><img src="img/photo/6.png" alt=""></picture></div>
+						</div>
+						<div class="photo__col-dn">
+							<div class=""><picture><source srcset="img/photo/7.webp" type="image/webp"><img src="img/photo/7.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/8.webp" type="image/webp"><img src="img/photo/8.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/9.webp" type="image/webp"><img src="img/photo/9.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/10.webp" type="image/webp"><img src="img/photo/10.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/11.webp" type="image/webp"><img src="img/photo/11.png" alt=""></picture></div>
+							<div class=""><picture><source srcset="img/photo/12.webp" type="image/webp"><img src="img/photo/12.png" alt=""></picture></div>
+						</div>
+
 					</div>
-					<button type="submit" class="button ">Ещё фото</button>
+					<button type="submit" class="button vse-btn">Ещё фото</button>
 				</div>
 			</section>
 			<section class="svidanie">
@@ -223,17 +248,27 @@
 				<div class="vibor__container">
 					<span>выбор за вами</span>
 					<h2>Один из двух иглу на ваш выбор</h2>
-					<div class="vibor__block">
-						<div class="vibor__col">
-							<div><picture><source srcset="img/vibor/1.webp" type="image/webp"><img src="img/vibor/1.png" alt=""></picture></div>
-							<h3>Классическая иглу</h3>
-							<p>Вместимость до 4х человек</p>
+					<!-- Оболочка слайдера -->
+					<div class="vibor__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="vibor__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="vibor__slide swiper-slide vibor__block">
+								<div class="vibor__col">
+									<div><picture><source srcset="img/vibor/1.webp" type="image/webp"><img src="img/vibor/1.png" alt=""></picture></div>
+									<h3>Классическая иглу</h3>
+									<p>Вместимость до 4х человек</p>
+								</div>
+							</div>
+							<div class="vibor__slide swiper-slide vibor__block">
+								<div class="vibor__col">
+									<div><picture><source srcset="img/vibor/2.webp" type="image/webp"><img src="img/vibor/2.png" alt=""></picture></div>
+									<h3>Футуристическая иглу</h3>
+									<p>Вместимость до 12 человек</p>
+								</div>
+							</div>
 						</div>
-						<div class="vibor__col">
-							<div><picture><source srcset="img/vibor/2.webp" type="image/webp"><img src="img/vibor/2.png" alt=""></picture></div>
-							<h3>Футуристическая иглу</h3>
-							<p>Вместимость до 12 человек</p>
-						</div>
+						<div class="swiper-pagination vibor-swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -257,77 +292,95 @@
 									<div class="otsiv__fon"></div>
 								</div>
 							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
+
+							<div class="swiper-pagination swiper-pagination-otsiv"></div>
 						</div>
 
-						<button type="button" class="swiper-button-prev _icon-arrow"></button>
-						<button type="button" class="swiper-button-next _icon-arrow"></button>
+						<button type="button" class="swiper-button-otsiv swiper-button-prev  _icon-arrow"></button>
+						<button type="button" class="swiper-button-otsiv swiper-button-next _icon-arrow"></button>
 					</div>
 				</div>
 			</section>
 			<section class="tarif">
 				<div class="tarif__container">
 					<h2>Выбери нужный тариф</h2>
-					<div class="tarif__block">
-						<div class="tarif__col">
-							<h3>ЛАЙТ</h3>
-							<h4>4990₽</h4>
-							<p>Продолжительность 30 минут</p>
-							<p>Романтическая обстановка</p>
-							<p>Cтол со свечами Музыка(bluetooth колонка) Пледы</p>
-							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
-							<p>Подарок бутылочка игристого (Советское)</p>
-							<button type="submit" class="button">Забронировать</button>
+					<!-- Оболочка слайдера -->
+					<div class="tarif__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="tarif__wrapper swiper-wrapper tarif__block">
+							<!-- Слайд -->
+							<div class="tarif__slide swiper-slide">
+								<div class="tarif__col">
+									<h3>ЛАЙТ</h3>
+									<h4>4990₽</h4>
+									<p>Продолжительность 30 минут</p>
+									<p>Романтическая обстановка</p>
+									<p>Cтол со свечами Музыка(bluetooth колонка) Пледы</p>
+									<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+									<p>Подарок бутылочка игристого (Советское)</p>
+									<button type="submit" class="button">Забронировать</button>
+								</div>
+							</div>
+							<div class="tarif__slide swiper-slide">
+								<div class="tarif__col">
+									<h3>Стандарт</h3>
+									<h4>7990₽</h4>
+									<p>Продолжительность 45 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+									<p>Романтическая обстановка</p>
+									<p>Cтол со свечами Музыка Пледы</p>
+									<p> Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+									<p>Подарок бутылочка игристого (Российское)</p>
+									<button type="submit" class="button">Забронировать</button>
+								</div>
+							</div>
+							<div class="tarif__slide swiper-slide">
+								<div class="tarif__col">
+									<h3>Стандарт+</h3>
+									<h4>8990₽</h4>
+									<p>Продолжительность 60 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+									<p>Романтическая обстановка</p>
+									<p>Cтол со свечами Музыка</p>
+									<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+									<p>Подарок бутылочка игристого (Абрау Дюрсо)</p>
+									<p>На случай если будет прохладно у нас есть пледы</p>
+									<button type="submit" class="button">Забронировать</button>
+								</div>
+							</div>
+							<div class="tarif__slide swiper-slide">
+								<div class="tarif__col">
+									<h3>VIP I</h3>
+									<h4>12990₽</h4>
+									<p>Продолжительность 90 минут 20 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
+									<p>Романтическая обстановка</p>
+									<p>Cтол со свечами Живая музыка (саксафон/скрипка/виоланчель 60 минут)</p>
+									<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
+									<p>Подарок бутылочка игристого (Абрау Дюрсо или Bosco)</p>
+									<button type="submit" class="button">Забронировать</button>
+								</div>
+							</div>
+							<div class="tarif__slide swiper-slide">
+								<div class="tarif__col">
+									<h3>VIP II</h3>
+									<h4>25990₽</h4>
+									<p>Продолжительность 120 минут
+									<div class="tip__p">30 минут фотосессия с профессиональным фотографом (25-40 фотографий)</div>
+									<div class="tip__p">Видео сьемка (1-3 минутный фильм)</div>
+									</p>
+									<p> Романтическая обстановка</p>
+									<p>Cтол со свечами
+									<div class="tip__p">Живая музыка (саксафон/скрипка/виоланчель 60 минут)</div>
+									</p>
+									<p>Роллы «Филадельфия»
+									<div class="tip__p">Горячий чай</div>
+									<div class="tip__p">Конфеты из бельгийского шоколада ручной работы</div>
+									</p>
+									<p>Подарок бутылочка игристого (Prosecco)</p>
+									<button type="submit" class="button">Забронировать</button>
+								</div>
+							</div>
 						</div>
-						<div class="tarif__col">
-							<h3>Стандарт</h3>
-							<h4>7990₽</h4>
-							<p>Продолжительность 45 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
-							<p>Романтическая обстановка</p>
-							<p>Cтол со свечами Музыка Пледы</p>
-							<p> Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
-							<p>Подарок бутылочка игристого (Российское)</p>
-							<button type="submit" class="button">Забронировать</button>
-						</div>
-						<div class="tarif__col">
-							<h3>Стандарт+</h3>
-							<h4>8990₽</h4>
-							<p>Продолжительность 60 минут 15 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
-							<p>Романтическая обстановка</p>
-							<p>Cтол со свечами Музыка</p>
-							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
-							<p>Подарок бутылочка игристого (Абрау Дюрсо)</p>
-							<p>На случай если будет прохладно у нас есть пледы</p>
-							<button type="submit" class="button">Забронировать</button>
-						</div>
-						<div class="tarif__col">
-							<h3>VIP I</h3>
-							<h4>12990₽</h4>
-							<p>Продолжительность 90 минут 20 минут фотосессия с профессиональным фотографом (25-40 фотографий)</p>
-							<p>Романтическая обстановка</p>
-							<p>Cтол со свечами Живая музыка (саксафон/скрипка/виоланчель 60 минут)</p>
-							<p>Горячий чай Конфеты из бельгийского шоколада ручной работы</p>
-							<p>Подарок бутылочка игристого (Абрау Дюрсо или Bosco)</p>
-							<button type="submit" class="button">Забронировать</button>
-						</div>
-						<div class="tarif__col">
-							<h3>VIP II</h3>
-							<h4>25990₽</h4>
-							<p>Продолжительность 120 минут
-							<div class="tip__p">30 минут фотосессия с профессиональным фотографом (25-40 фотографий)</div>
-							<div class="tip__p">Видео сьемка (1-3 минутный фильм)</div>
-							</p>
-							<p> Романтическая обстановка</p>
-							<p>Cтол со свечами
-							<div class="tip__p">Живая музыка (саксафон/скрипка/виоланчель 60 минут)</div>
-							</p>
-							<p>Роллы «Филадельфия»
-							<div class="tip__p">Горячий чай</div>
-							<div class="tip__p">Конфеты из бельгийского шоколада ручной работы</div>
-							</p>
-							<p>Подарок бутылочка игристого (Prosecco)</p>
-							<button type="submit" class="button">Забронировать</button>
-						</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -336,7 +389,7 @@
 					<span>Немного о нас</span>
 					<h2>Наша команда</h2>
 					<!-- Оболочка слайдера -->
-					<div class="comand__slider swiper">
+					<div class=" comand__slider-two swiper">
 						<!-- Двигающееся часть слайдера -->
 						<div class="comand__wrapper swiper-wrapper">
 							<!-- Слайд -->
@@ -351,7 +404,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="имя-блока__slide swiper-slide">
+							<div class="comand__slide swiper-slide">
 								<div class="comand__block">
 									<div class="comand__block-img comand__block-img__two">
 										<picture><source srcset="img/comand/5.webp" type="image/webp"><img src="img/comand/5.png" alt=""></picture>
@@ -362,7 +415,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="имя-блока__slide swiper-slide">
+							<div class="comand__slide swiper-slide">
 								<div class="comand__block">
 									<div class="comand__block-img">
 										<picture><source srcset="img/comand/6.webp" type="image/webp"><img src="img/comand/6.png" alt=""></picture>
@@ -374,8 +427,8 @@
 								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination"></div>
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
 			</section>
 			<section class="vopros">
@@ -444,10 +497,8 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__hd"></div>
-				<a href="" class="footer__logo" data-da=".footer__hd,1003"><picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture></a>
-				<nav class="menu__body" data-da=".footer__hd,1003">
-					<h4>Навигация</h4>
+				<a href="" class="footer__logo"><picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture></a>
+				<nav class="menu__body">
 					<ul class="menu__list">
 						<li class="menu__item">
 							<div data-spollers data-one-spoller class="spollers">
@@ -476,12 +527,6 @@
 									</div>
 								</div>
 							</div>
-						</li>
-						<li class="menu__item menu__item-hd">
-							<a href="">Услуги</a>
-						</li>
-						<li class="menu__item menu__item-hd">
-							<a href="">Мероприятия</a>
 						</li>
 						<li class="menu__item">
 							<a href="">Фото</a>
@@ -543,7 +588,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240815010309"></script>
+	<script src="js/app.min.js?_v=20240815221001"></script>
 </body>
 
 </html>
