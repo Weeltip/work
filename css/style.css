@@ -520,6 +520,7 @@ h2 {
 .header {
   background: #A22929;
   padding: 6px 0;
+  z-index: 5px;
 }
 
 .header ul {
