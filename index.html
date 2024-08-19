@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240815225222">
+	<link rel="stylesheet" href="css/style.css?_v=20240819095224">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240815225222" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240819095224" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -20,34 +20,36 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item">
-								<div data-spollers data-one-spoller class="spollers">
-									<div class="spollers__item">
-										<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
-										<div class="spollers__body">
-											<div>
-												<a href="">Гендер пати</a>
-												<a href="">Иглу на крыше</a>
-												<a href="">Аренда инвентаря</a>
-												<a href="">Свидание на крыше</a>
+								<li class="menu__item">
+									<div data-spollers data-one-spoller  class="spollers">
+										<div class="spollers__item">
+											<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
+											<div class="spollers__body">
+												<i></i>
+												<div >
+													<a href="">Гендер пати</a>
+													<a href="">Иглу на крыше</a>
+													<a href="">Аренда инвентаря</a>
+													<a href="">Свидание на крыше</a>
+												</div>
+											</div>
+										</div>
+										<div class="spollers__item">
+											<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
+											<div class="spollers__body">
+												<i></i>
+												<div >
+													<a href="">Гендер пати</a>
+													<a href="">Иглу на крыше</a>
+													<a href="">Аренда инвентаря</a>
+													<a href="">Свидание на крыше</a>
+													<a href="">Свидание в кинотеатре</a>
+													<a href="">Предложение руки и сердца </a>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="spollers__item">
-										<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
-										<div class="spollers__body">
-											<div>
-												<a href="">Гендер пати</a>
-												<a href="">Иглу на крыше</a>
-												<a href="">Аренда инвентаря</a>
-												<a href="">Свидание на крыше</a>
-												<a href="">Свидание в кинотеатре</a>
-												<a href="">Предложение руки и сердца </a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
+								</li>
 							<li class="menu__item">
 								<a href="">Фото</a>
 							</li>
@@ -61,19 +63,25 @@
 					</nav>
 				</div>
 				<a href="" class="logo">
-					<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+					<img src="img/logo.png" alt="">
 				</a>
+				<div class="header-ic__hd"></div>
 				<div data-da=".menu__body,992,2" class="header__col">
 					<a href="tel:+79275116070" class="header__tel">+7(927)511-60-70</a>
 					<button type="submit" class="button btn2">Заказать звонок</button>
-					<a href="#"><i class="_icon-vk"></i></a>
-
+					<a href="#" data-da=".header-ic__hd,992,2"><i class="_icon-vk"></i></a>
+					
 				</div>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 			</div>
 		</header>
 		<main class="page">
 			<section class="main">
+				<video class="background-video" autoplay muted loop playsinline>
+					<source src="img/igloobar_bg.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<img src="img/ma.png" class="ma" alt="">
 				<div class="main__container">
 					<h1>Свидание на крыше на 18 этаже в уютном иглу в Волгограде</h1>
 					<button type="submit" class="button vse-btn">Забронировать</button>
@@ -82,47 +90,47 @@
 			</section>
 			<section class="vid">
 				<div class="vid__container">
-					<picture><source srcset="img/vid-main.webp" type="image/webp"><img class="vid-main" src="img/vid-main.png" alt=""></picture>
+					<img class="vid-main" src="img/vid-main.png" alt="">
 					<span class="span">Уникальный вид</span>
-					<h2>Все достопримечательности Волгограда</h2>
+					<h2>Все <br class="br"> достопримечательности Волгограда</h2>
 					<!-- Оболочка слайдера -->
 					<div class="vid__slider swiper">
 						<!-- Двигающееся часть слайдера -->
 						<div class="vid__wrapper swiper-wrapper vid-cart">
 							<!-- Слайд -->
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/1.webp" type="image/webp"><img src="img/vid/1.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img src="img/vid/1.png" alt=""></div>
 									<p>Мамаев Курган</p>
 								</ul>
 							</div>
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/2.webp" type="image/webp"><img src="img/vid/2.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img src="img/vid/2.png" alt=""></div>
 									<p>Мост</p>
 								</ul>
 							</div>
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/3.webp" type="image/webp"><img class="most" src="img/vid/3.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img class="most" src="img/vid/3.png" alt=""></div>
 									<p>Река Волга</p>
 								</ul>
 							</div>
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/4.webp" type="image/webp"><img src="img/vid/4.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img src="img/vid/4.png" alt=""></div>
 									<p>Стадион</p>
 								</ul>
 							</div>
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/5.webp" type="image/webp"><img src="img/vid/5.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img src="img/vid/5.png" alt=""></div>
 									<p>Центр города</p>
 								</ul>
 							</div>
 							<div class="vid__slide swiper-slide">
-								<ul>
-									<div class=""><picture><source srcset="img/vid/6.webp" type="image/webp"><img src="img/vid/6.png" alt=""></picture></div>
+								<ul >
+									<div class=""><img src="img/vid/6.png" alt=""></div>
 									<p>Церковь</p>
 								</ul>
 							</div>
@@ -132,9 +140,18 @@
 					</div>
 					<text class="_icon-binokol">У вас в распоряжении будет бинокль/телескоп для более детального осмотра города</text>
 					<div class="">
-						<div class="vid-fon-back"></div>
+						<div class="vid-video__body">
+							<video class="vid-background-video video1" autoplay muted loop playsinline>
+								<source src="img/deni.mp4" type="video/mp4">
+							</video>
+							<video class="vid-background-video video2 hidden" autoplay muted loop playsinline >
+								<source src="img/noch.mp4" type="video/mp4">
+							</video>								
+						</div>
+
+						
 						<div class="vid-fon-back__btn">
-							<button type="submit" class="vid-fon-back__button ">
+							<button type="submit" class="vid-fon-back__button">
 								<i class="ri-sun-line"></i>
 								<i class="ri-moon-fill"></i>
 							</button>
@@ -145,7 +162,7 @@
 			<section class="video">
 				<div class="video__container">
 					<span class="span">Для соц сетей</span>
-					<h2>Каждому клиенту видео</h2>
+					<h2 class="no-bukv">Каждому клиенту видео</h2>
 					<p>Для каждого клиента мы снимаем коротки 10-20 секундный ролик на iphone 15 pro для дальнейшего размещения в социальных сетях.</p>
 					<!-- Оболочка слайдера -->
 					<div class="viddeo__slider swiper">
@@ -156,10 +173,10 @@
 								<div class="video__block">
 									<video autoplay muted loop class="video__col">
 										<source src="your-video.mp4" type="video/mp4">
-									</video>
+									</video>										
 									<div class="play">
 										<button type="submit" class="play__icon">
-											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+											<img src="img/video/play.png" alt="">												
 										</button>
 									</div>
 								</div>
@@ -168,10 +185,10 @@
 								<div class="video__block video__block-two">
 									<video autoplay muted loop class="video__col">
 										<source src="your-video.mp4" type="video/mp4">
-									</video>
+									</video>										
 									<div class="play">
 										<button type="submit" class="play__icon">
-											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+											<img src="img/video/play.png" alt="">												
 										</button>
 
 									</div>
@@ -181,10 +198,10 @@
 								<div class="video__block video__block-free">
 									<video autoplay muted loop class="video__col">
 										<source src="your-video.mp4" type="video/mp4">
-									</video>
+									</video>										
 									<div class="play">
 										<button type="submit" class="play__icon">
-											<picture><source srcset="img/video/play.webp" type="image/webp"><img src="img/video/play.png" alt=""></picture>
+											<img src="img/video/play.png" alt="">												
 										</button>
 
 									</div>
@@ -203,20 +220,20 @@
 					<h2>Профессианольные фотографии</h2>
 					<div class="photo__col">
 						<div class="photo__col-dn">
-							<div class=""><picture><source srcset="img/photo/1.webp" type="image/webp"><img src="img/photo/1.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/2.webp" type="image/webp"><img src="img/photo/2.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/3.webp" type="image/webp"><img src="img/photo/3.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/4.webp" type="image/webp"><img src="img/photo/4.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/5.webp" type="image/webp"><img src="img/photo/5.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/6.webp" type="image/webp"><img src="img/photo/6.png" alt=""></picture></div>
+							<div class=""><img src="img/photo/1.png" alt=""></div>
+							<div class=""><img src="img/photo/2.png" alt=""></div>
+							<div class=""><img src="img/photo/3.png" alt=""></div>
+							<div class=""><img src="img/photo/4.png" alt=""></div>
+							<div class=""><img src="img/photo/5.png" alt=""></div>
+							<div class=""><img src="img/photo/6.png" alt=""></div>								
 						</div>
 						<div class="photo__col-dn">
-							<div class=""><picture><source srcset="img/photo/7.webp" type="image/webp"><img src="img/photo/7.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/8.webp" type="image/webp"><img src="img/photo/8.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/9.webp" type="image/webp"><img src="img/photo/9.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/10.webp" type="image/webp"><img src="img/photo/10.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/11.webp" type="image/webp"><img src="img/photo/11.png" alt=""></picture></div>
-							<div class=""><picture><source srcset="img/photo/12.webp" type="image/webp"><img src="img/photo/12.png" alt=""></picture></div>
+							<div class=""><img src="img/photo/7.png" alt=""></div>
+							<div class=""><img src="img/photo/8.png" alt=""></div>
+							<div class=""><img src="img/photo/9.png" alt=""></div>
+							<div class=""><img src="img/photo/10.png" alt=""></div>
+							<div class=""><img src="img/photo/11.png" alt=""></div>
+							<div class=""><img src="img/photo/12.png" alt=""></div>								
 						</div>
 
 					</div>
@@ -229,17 +246,17 @@
 					<div class="svidanie__block">
 						<div class="svidanie-fon"></div>
 						<div class="svidanie__col">
-							<h2>Заголовок 1</h2>
-							<h3>Lorem ipsum dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
-							<h3><b>Lorem ipsum</b> - dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
+								<h2>Заголовок 1</h2>
+								<h3>Lorem ipsum dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
+								<h3><b>Lorem ipsum</b> - dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
 						</div>
 					</div>
 					<div class="svidanie__block">
 						<div class="svidanie-fon"></div>
 						<div class="svidanie__col">
-							<h2>Заголовок 1</h2>
-							<h3>Lorem ipsum dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
-							<button type="submit" class="button vse-btn">Подробнее</button>
+								<h2>Заголовок 1</h2>
+								<h3>Lorem ipsum dolor sit amet consectetur. Ac eu quis elit consequat et. Nulla enim nisi a neque. Sollicitudin mi cursus ut metus orci commodo maecenas viverra rutrum. Quis sit tortor leo gravida gravida et purus cursus. Adipiscing condimentum netus arcu condimentum potenti sollicitudin dignissim quam quisque. Posuere praesent morbi blandit eget turpis quis convallis id leo. </h3>
+								<button type="submit" class="button vse-btn">Подробнее</button>
 						</div>
 					</div>
 				</div>
@@ -255,14 +272,14 @@
 							<!-- Слайд -->
 							<div class="vibor__slide swiper-slide vibor__block">
 								<div class="vibor__col">
-									<div><picture><source srcset="img/vibor/1.webp" type="image/webp"><img src="img/vibor/1.png" alt=""></picture></div>
+									<div ><img src="img/vibor/1.png" alt=""></div>
 									<h3>Классическая иглу</h3>
 									<p>Вместимость до 4х человек</p>
 								</div>
 							</div>
 							<div class="vibor__slide swiper-slide vibor__block">
 								<div class="vibor__col">
-									<div><picture><source srcset="img/vibor/2.webp" type="image/webp"><img src="img/vibor/2.png" alt=""></picture></div>
+									<div ><img src="img/vibor/2.png" alt=""></div>
 									<h3>Футуристическая иглу</h3>
 									<p>Вместимость до 12 человек</p>
 								</div>
@@ -272,38 +289,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="otsiv">
-				<div class="otsiv__container">
-					<!-- Оболочка слайдера -->
-					<span class="span">чтО О НАС ГОВОРЯТ</span>
-					<h2>Отзывы клиентов</h2>
-					<div class="otsiv__block">
-						<div class="otsiv__slider swiper">
-							<!-- Двигающееся часть слайдера -->
-							<div class="otsiv__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<div class="otsiv__slide swiper-slide">
-									<div class="otsiv__fon"></div>
-								</div>
-								<div class="otsiv__slide swiper-slide">
-									<div class="otsiv__fon"></div>
-								</div>
-								<div class="otsiv__slide swiper-slide">
-									<div class="otsiv__fon"></div>
-								</div>
-							</div>
-
-							<div class="swiper-pagination swiper-pagination-otsiv"></div>
-						</div>
-
-						<button type="button" class="swiper-button-otsiv swiper-button-prev  _icon-arrow"></button>
-						<button type="button" class="swiper-button-otsiv swiper-button-next _icon-arrow"></button>
-					</div>
-				</div>
-			</section>
 			<section class="tarif">
 				<div class="tarif__container">
-					<h2>Выбери нужный тариф</h2>
+					<h2 class="no-bukv">Выбери нужный тариф</h2>
 					<!-- Оболочка слайдера -->
 					<div class="tarif__slider swiper">
 						<!-- Двигающееся часть слайдера -->
@@ -362,18 +350,10 @@
 								<div class="tarif__col">
 									<h3>VIP II</h3>
 									<h4>25990₽</h4>
-									<p>Продолжительность 120 минут
-									<div class="tip__p">30 минут фотосессия с профессиональным фотографом (25-40 фотографий)</div>
-									<div class="tip__p">Видео сьемка (1-3 минутный фильм)</div>
-									</p>
+									<p>Продолжительность 120 минут <div class="tip__p">30 минут фотосессия с профессиональным фотографом (25-40 фотографий)</div>  <div class="tip__p">Видео сьемка (1-3 минутный фильм)</div></p>
 									<p> Романтическая обстановка</p>
-									<p>Cтол со свечами
-									<div class="tip__p">Живая музыка (саксафон/скрипка/виоланчель 60 минут)</div>
-									</p>
-									<p>Роллы «Филадельфия»
-									<div class="tip__p">Горячий чай</div>
-									<div class="tip__p">Конфеты из бельгийского шоколада ручной работы</div>
-									</p>
+									<p>Cтол со свечами <div class="tip__p">Живая музыка (саксафон/скрипка/виоланчель 60 минут)</div> </p>
+									<p>Роллы «Филадельфия»  <div class="tip__p">Горячий чай</div> <div class="tip__p">Конфеты из бельгийского шоколада ручной работы</div> </p>
 									<p>Подарок бутылочка игристого (Prosecco)</p>
 									<button type="submit" class="button">Забронировать</button>
 								</div>
@@ -382,6 +362,35 @@
 						<!-- Если нужна пагинация -->
 						<div class="swiper-pagination"></div>
 					</div>
+				</div>
+			</section>
+			<section class="otsiv">
+				<div class="otsiv__container">
+					<!-- Оболочка слайдера -->
+					 <span class="span">чтО О НАС ГОВОРЯТ</span>
+					 <h2>Отзывы клиентов</h2>
+					 <div class="otsiv__block">
+						<div class="otsiv__slider swiper">
+							<!-- Двигающееся часть слайдера -->
+							<div class="otsiv__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="otsiv__slide swiper-slide">
+									<div class="otsiv__fon"></div>
+								</div>
+								<div class="otsiv__slide swiper-slide">
+									<div class="otsiv__fon"></div>
+								</div>
+								<div class="otsiv__slide swiper-slide">
+									<div class="otsiv__fon"></div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination swiper-pagination-otsiv"></div>
+						</div>	
+						
+					<button type="button" class="swiper-button-otsiv swiper-button-prev  _icon-arrow"></button>
+					<button type="button" class="swiper-button-otsiv swiper-button-next _icon-arrow"></button>						
+					 </div>
 				</div>
 			</section>
 			<section class="comand">
@@ -396,7 +405,7 @@
 							<div class="comand__slide swiper-slide">
 								<div class="comand__block">
 									<div class="comand__block-img">
-										<picture><source srcset="img/comand/4.webp" type="image/webp"><img src="img/comand/4.png" alt=""></picture>
+										<img src="img/comand/4.png" alt="">
 									</div>
 									<div class="comand__block-info">
 										<p>Должность</p>
@@ -407,7 +416,7 @@
 							<div class="comand__slide swiper-slide">
 								<div class="comand__block">
 									<div class="comand__block-img comand__block-img__two">
-										<picture><source srcset="img/comand/5.webp" type="image/webp"><img src="img/comand/5.png" alt=""></picture>
+										<img src="img/comand/5.png" alt="">
 									</div>
 									<div class="comand__block-info">
 										<p>Должность</p>
@@ -418,7 +427,7 @@
 							<div class="comand__slide swiper-slide">
 								<div class="comand__block">
 									<div class="comand__block-img">
-										<picture><source srcset="img/comand/6.webp" type="image/webp"><img src="img/comand/6.png" alt=""></picture>
+										<img src="img/comand/6.png" alt="">
 									</div>
 									<div class="comand__block-info">
 										<p>Должность</p>
@@ -435,58 +444,47 @@
 				<div class="vopros__container">
 					<span class="span-no span">у вас возник вопрос?</span>
 					<h2>Часто задаваемые вопросы</h2>
-					<div>
+					<div >
 						<div data-spollers data-one-spoller class="spollers">
 							<div class="spollers__item">
 								<button type="button" data-spoller class="spollers__title ">
-									<p>При заказе товаров с разных заводов, возможно ли консолидировать все товары вместе и отправить их в Россию единым грузом?</p> <i class="_icon-arrow"></i>
-								</button>
+									<p>При заказе товаров с разных заводов, возможно ли консолидировать все товары вместе и отправить их в Россию единым грузом?</p> <i class="_icon-arrow"></i>	</button>
 								<div class="spollers__body">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
 								</div>
 							</div>
 							<div class="spollers__item">
-								<button type="button" data-spoller class="spollers__title ">
-									<p>Можете ли вы помочь оплатить товары китайского завода?</p> <i class="_icon-arrow"></i>
-								</button>
+								<button type="button" data-spoller class="spollers__title "><p>Можете ли вы помочь оплатить товары китайского завода?</p>  <i class="_icon-arrow"></i></button>
 								<div class="spollers__body">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
 								</div>
 							</div>
 							<div class="spollers__item">
-								<button type="button" data-spoller class="spollers__title ">
-									<p>Когда и как оплачивается перевозка?</p> <i class="_icon-arrow"></i>
-								</button>
+								<button type="button" data-spoller class="spollers__title "><p>Когда и как оплачивается перевозка?</p>  <i class="_icon-arrow"></i></button>
+								<div class="spollers__body">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo! 
+								</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title "><p>Если я не в Москве, можно ли доставить товар в мой город?</p>  <i class="_icon-arrow"></i></button>
 								<div class="spollers__body">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
 								</div>
 							</div>
 							<div class="spollers__item">
-								<button type="button" data-spoller class="spollers__title ">
-									<p>Если я не в Москве, можно ли доставить товар в мой город?</p> <i class="_icon-arrow"></i>
-								</button>
+								<button type="button" data-spoller class="spollers__title "><p>Товар потерян или прибывает с задержкой, что делать?</p> <i class="_icon-arrow"></i> </button>
 								<div class="spollers__body">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
 								</div>
 							</div>
 							<div class="spollers__item">
-								<button type="button" data-spoller class="spollers__title ">
-									<p>Товар потерян или прибывает с задержкой, что делать?</p> <i class="_icon-arrow"></i>
-								</button>
-								<div class="spollers__body">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
-								</div>
-							</div>
-							<div class="spollers__item">
-								<button type="button" data-spoller class="spollers__title ">
-									<p>Срок давности при перевозке и цена?</p> <i class="_icon-arrow"></i>
-								</button>
+								<button type="button" data-spoller class="spollers__title "><p>Срок давности при перевозке и цена?</p>  <i class="_icon-arrow"></i></button>
 								<div class="spollers__body">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, illum aspernatur qui doloribus nulla sequi, laboriosam placeat iste tenetur fugit quisquam reiciendis commodi at. Quis veritatis sint voluptate sunt illo!
 								</div>
 							</div>
 						</div>
-
+						
 					</div>
 					<div class="vopros__cart">
 						<h3 class="h3-white">Остались вопросы?</h3>
@@ -497,39 +495,49 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<a href="" class="footer__logo"><picture><source srcset="img/footer-logo.webp" type="image/webp"><img src="img/footer-logo.png" alt=""></picture></a>
-				<nav class="menu__body">
+				<div class="footer__hd">
+					
+				</div>
+				<a href="" class="footer__logo"  data-da=".footer__hd,1003"><img src="img/footer-logo.png" alt=""></a>
+				<nav class="menu__body" data-da=".footer__hd,1003">
 					<ul class="menu__list">
-						<li class="menu__item">
-							<div data-spollers data-one-spoller class="spollers">
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
-									<div class="spollers__body">
-										<div>
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
+							<li class="menu__item">
+								<div data-spollers data-one-spoller  class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
+										<div class="spollers__body">
+											<div >
+												<a href="">Гендер пати</a>
+												<a href="">Иглу на крыше</a>
+												<a href="">Аренда инвентаря</a>
+												<a href="">Свидание на крыше</a>
+											</div>
+										</div>
+									</div>
+									<div class="spollers__item">
+										<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
+										<div class="spollers__body">
+											<div >
+												<a href="">Гендер пати</a>
+												<a href="">Иглу на крыше</a>
+												<a href="">Аренда инвентаря</a>
+												<a href="">Свидание на крыше</a>
+												<a href="">Свидание в кинотеатре</a>
+												<a href="">Предложение руки и сердца </a>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
-									<div class="spollers__body">
-										<div>
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
-											<a href="">Свидание в кинотеатре</a>
-											<a href="">Предложение руки и сердца </a>
-										</div>
-									</div>
-								</div>
-							</div>
+							</li>
+							<h4 class="footer__h4">Навигация</h4>
+						<li class="menu__item menu__item-hd">
+								<a href="">Услуги</a>
+						</li>
+						<li class="menu__item menu__item-hd">
+								<a href="">Фото</a>
 						</li>
 						<li class="menu__item">
-							<a href="">Фото</a>
+							<a href="">Мероприятия</a>
 						</li>
 						<li class="menu__item">
 							<a href="">Франшиза</a>
@@ -545,7 +553,7 @@
 					<a href="" class="_icon-vk"></a>
 				</div>
 			</div>
-		</footer>
+	</footer>
 	</div>
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -588,7 +596,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240815225222"></script>
+	<script src="js/app.min.js?_v=20240819095224"></script>
 </body>
 
 </html>

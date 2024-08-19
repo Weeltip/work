@@ -4151,6 +4151,86 @@
             },
             on: {}
         });
+        new core(".comand__slider-two", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            centeredSlides: true,
+            initialSlide: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 0
+                }
+            },
+            on: {}
+        });
+        new core(".vid__slider", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 6,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: false
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    }
+                },
+                870: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    }
+                },
+                1110: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    }
+                },
+                1250: {
+                    slidesPerView: 6,
+                    spaceBetween: 0
+                }
+            },
+            on: {}
+        });
         new core(".otsiv__slider", {
             modules: [ Navigation, Pagination, Autoplay ],
             observer: true,
@@ -4265,89 +4345,6 @@
             },
             on: {}
         });
-        new core(".vid__slider", {
-            modules: [ Navigation, Pagination, Autoplay ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            autoHeight: true,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: false
-            },
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    autoHeight: true
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                        type: "bullets"
-                    },
-                    renderBullet: function(index, className) {
-                        if (index < this.slidesPerView) return `<span class="${className} swiper-pagination-bullet-active"></span>`;
-                        return `<span class="${className}"></span>`;
-                    }
-                },
-                1180: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                }
-            },
-            on: {
-                slideChange: function() {
-                    updatePagination(this);
-                }
-            }
-        });
-        new core(".comand__slider-two", {
-            modules: [ Navigation, Pagination, Autoplay ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 0,
-            autoHeight: true,
-            speed: 800,
-            centeredSlides: true,
-            initialSlide: 1,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    autoHeight: true
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                },
-                1100: {
-                    slidesPerView: 3,
-                    spaceBetween: 0
-                }
-            },
-            on: {}
-        });
-    }
-    function updatePagination(swiper) {
-        const totalSlides = swiper.pagination.bullets.length;
-        const visibleSlides = swiper.params.slidesPerView;
-        swiper.pagination.bullets.forEach((bullet => bullet.classList.remove("swiper-pagination-bullet-active")));
-        for (let i = 0; i < visibleSlides; i++) if (swiper.realIndex + i < totalSlides) swiper.pagination.bullets[swiper.realIndex + i].classList.add("swiper-pagination-bullet-active");
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -4855,6 +4852,52 @@
     menuInit();
     spollers();
     pageNavigation();
+    const containers = document.querySelectorAll(".vibe");
+    containers.forEach((container => {
+        const body = container.querySelector(".vibe__body");
+        const vibeContainer = container.querySelector(".vibe__container");
+        const vibe = container;
+        let currentScrollPosition = 0;
+        let targetScrollPosition = 0;
+        let isMoving = false;
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+        function animateScroll() {
+            if (isMoving) {
+                currentScrollPosition = lerp(currentScrollPosition, targetScrollPosition, .4);
+                body.style.transform = `translateX(${currentScrollPosition}px)`;
+                if (Math.abs(currentScrollPosition - targetScrollPosition) > .5) requestAnimationFrame(animateScroll); else isMoving = false;
+            }
+        }
+        vibeContainer.addEventListener("mousemove", (e => {
+            const containerWidth = vibeContainer.offsetWidth;
+            const vibeWidth = vibe.offsetWidth;
+            const bodyWidth = body.scrollWidth;
+            if (bodyWidth > vibeWidth) {
+                const vibeRect = vibe.getBoundingClientRect();
+                const mouseX = e.clientX - vibeRect.left;
+                const centerX = vibeWidth / 2;
+                const maxScroll = bodyWidth - vibeWidth;
+                const visibleRightEdge = Math.min(containerWidth / 2, (bodyWidth - vibeWidth) / 2);
+                const visibleLeftEdge = -Math.min(containerWidth / 2, (bodyWidth - vibeWidth) / 2);
+                const relativePosition = mouseX - centerX;
+                const scrollPercentage = relativePosition / (containerWidth / 2);
+                targetScrollPosition = -scrollPercentage * maxScroll;
+                targetScrollPosition = Math.max(Math.min(targetScrollPosition, maxScroll), -maxScroll);
+                targetScrollPosition = Math.min(Math.max(targetScrollPosition, visibleLeftEdge), visibleRightEdge);
+                if (!isMoving) {
+                    isMoving = true;
+                    animateScroll();
+                }
+            }
+        }));
+        vibeContainer.addEventListener("mouseleave", (() => {
+            targetScrollPosition = 0;
+            if (!isMoving) {
+                isMoving = true;
+                animateScroll();
+            }
+        }));
+    }));
     document.querySelectorAll(".select").forEach((select => {
         const title = select.querySelector(".select__title");
         const options = select.querySelector(".select__options");
@@ -4878,5 +4921,22 @@
     document.querySelector(".vid-fon-back__button").addEventListener("click", (function() {
         this.classList.toggle("vid-back__button-active");
         document.querySelector(".ri-sun-line").classList.toggle("ri-sun-line-active");
+        const video1 = document.querySelector(".video1");
+        const video2 = document.querySelector(".video2");
+        if (video1.classList.contains("hidden")) {
+            video1.classList.remove("hidden");
+            video2.classList.add("hidden");
+        } else {
+            video1.classList.add("hidden");
+            video2.classList.remove("hidden");
+        }
+    }));
+    window.addEventListener("load", (function() {
+        const video = document.querySelector(".background-video");
+        setTimeout((function() {
+            if (video.readyState >= 3) video.classList.add("loaded"); else video.addEventListener("canplaythrough", (function() {
+                video.classList.add("loaded");
+            }));
+        }), 12e3);
     }));
 })();
