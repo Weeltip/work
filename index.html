@@ -6,80 +6,58 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css?_v=20240820000037">
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css"> 
+	<link rel="stylesheet" href="./css/style.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=20240820000037" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css?_v=2024083319090840" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-	<div class="header__containers">
-		<div class="header__menu menu">
-			<nav class="menu__body">
-				<ul class="menu__list">
-						<li class="menu__item">
-							<div data-spollers data-one-spoller  class="spollers">
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
-									<div class="spollers__body">
-										<i></i>
-										<div >
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
-										</div>
-									</div>
-								</div>
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
-									<div class="spollers__body">
-										<i></i>
-										<div >
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
-											<a href="">Свидание в кинотеатре</a>
-											<a href="">Предложение руки и сердца </a>
-										</div>
-									</div>
-								</div>
+		<header>
+			<div class="header__container">
+				<nav class="nav">
+					<!-- <button type="submit" class="button-menu__close icon-menu"></button> -->
+					<ul>
+						<div class="header__spollers">
+							<button ><a href="#" class="spoller__a _icon-arrow">Услуги</a></button>
+							<div class="header__body">
+								<a href="#">Гендер пати</a>
+								<a href="#">Иглу на крыше</a>
+								<a href="">Аренда инвентаря</a>
+								<a href="">Свидание на крыше</a>								
 							</div>
-						</li>
-					<li class="menu__item">
+						</div>
+						<div class="header__spollers">
+							<button ><a href="#" class="spoller__a _icon-arrow">Мероприятия</a></button>
+							<div class="header__body">
+								<a href="#">Гендер пати</a>
+								<a href="#">Иглу на крыше</a>
+								<a href="">Аренда инвентаря</a>
+								<a href="">Свидание на крыше</a>								
+							</div>
+						</div>
 						<a href="">Фото</a>
-					</li>
-					<li class="menu__item">
 						<a href="">Франшиза</a>
-					</li>
-					<li class="menu__item">
 						<a href="">Контакты</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<a href="" class="logo">
-			<img src="img/logo.png" alt="">
-		</a>
-		<div class="header-ic__hd"></div>
-		<div data-da=".menu__body,992,2" class="header__col">
-			<a href="tel:+79275116070" class="header__tel">+7(927)511-60-70</a>
-			<button type="submit" class="button btn2">Заказать звонок</button>
-			<a href="#" data-da=".header-ic__hd,992,2"><i class="_icon-vk"></i></a>
-			
-		</div>
-		<button type="button" class="menu__icon icon-menu"><span></span></button>
-	</div>
-</header>
-			<main class="page">
-				<section class="main">
+					</ul>
+				</nav>
+				<a href="" class="logo"><img src="img/logo.png" alt=""></a>
+				<div class="header__info">
+					<a href="" class="header__tel" data-da=".nav,991">+7(927)511-60-70</a>
+					<button type="submit"  class="button coffe-btn" data-da=".nav,991" data-popup="#popup">Заказать звонок</button>
+					<a href="" class="_icon-vk"></a>
+				</div>
+				<button type="submit" class="button-menu__open icon-menu"><span></span></button>
+			</div>
+		</header>
+
+			<main class="main-two">
+				<section class="main ">
 					<video class="background-video" autoplay muted loop playsinline>
-						<source src="img/header-video.mp4" type="video/mp4">
-						Your browser does not support the video tag.
+						<source src="img/igloobar_bg.mp4" type="video/mp4">
 					</video>
 					<img src="img/ma.png" class="ma" alt="">
 					<div class="main__container">
@@ -87,12 +65,19 @@
 						<button type="submit" class="button vse-btn">Забронировать</button>
 
 					</div>
+					<div class="love__body">
+						<div class="love__block">
+							<img src="img/love.png" class="love" alt="">
+							<img src="img/line-love.png" class="line-love" alt="">
+						</div>						
+					</div>
+
 				</section>
 				<section class="vid">
 					<div class="vid__container">
 						<img class="vid-main" src="img/vid-main.png" alt="">
-						<span class="span">Уникальный вид</span>
-						<h2>Все <br class="br"> достопримечательности Волгограда</h2>
+						<h5 class="span h5-hd">Уникальный вид</h5>
+						<h2>Все <br> достопримечательности Волгограда</h2>
 						<!-- Оболочка слайдера -->
 						<div class="vid__slider swiper">
 							<!-- Двигающееся часть слайдера -->
@@ -136,7 +121,7 @@
 								</div>
 							</div>
 							<!-- Если нужна пагинация -->
-							<div class="swiper-pagination"></div>
+							<div class="swiper-pagination vid-pagination"></div>
 						</div>
 						<text class="_icon-binokol">У вас в распоряжении будет бинокль/телескоп для более детального осмотра города</text>
 						<div class="">
@@ -161,62 +146,91 @@
 				</section>
 				<section class="video">
 					<div class="video__container">
-						<span class="span">Для соц сетей</span>
+						<h5 class="span h5-hd">Для соц сетей</h5>
 						<h2 class="no-bukv">Каждому клиенту видео</h2>
 						<p>Для каждого клиента мы снимаем коротки 10-20 секундный ролик на iphone 15 pro для дальнейшего размещения в социальных сетях.</p>
 						<!-- Оболочка слайдера -->
-						<div class="viddeo__slider swiper">
-							<!-- Двигающееся часть слайдера -->
-							<div class="viddeo__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<div class="viddeo__slide swiper-slide">
-									<div class="video__block">
-										<video autoplay muted loop class="video__col">
-											<source src="your-video.mp4" type="video/mp4">
-										</video>										
-										<div class="play">
-											<button type="submit" class="play__icon">
-												<img src="img/video/play.png" alt="">												
-											</button>
+						 <div class="dopblock__video">
+							<div class="viddeo__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="viddeo__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="viddeo__slide swiper-slide">
+										<div class="video__block">
+											<video autoplay muted loop class="video__col">
+												<source src="your-video.mp4" type="video/mp4">
+											</video>										
+											<div class="play">
+												<button type="submit" class="play__icon">
+													<img src="img/video/play.png" alt="">												
+												</button>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="viddeo__slide swiper-slide">
-									<div class="video__block video__block-two">
-										<video autoplay muted loop class="video__col">
-											<source src="your-video.mp4" type="video/mp4">
-										</video>										
-										<div class="play">
-											<button type="submit" class="play__icon">
-												<img src="img/video/play.png" alt="">												
-											</button>
+									<div class="viddeo__slide swiper-slide">
+										<div class="video__block video__block-two">
+											<video autoplay muted loop class="video__col">
+												<source src="your-video.mp4" type="video/mp4">
+											</video>										
+											<div class="play">
+												<button type="submit" class="play__icon">
+													<img src="img/video/play.png" alt="">												
+												</button>
 
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="viddeo__slide swiper-slide">
-									<div class="video__block video__block-free">
-										<video autoplay muted loop class="video__col">
-											<source src="your-video.mp4" type="video/mp4">
-										</video>										
-										<div class="play">
-											<button type="submit" class="play__icon">
-												<img src="img/video/play.png" alt="">												
-											</button>
+									<div class="viddeo__slide swiper-slide">
+										<div class="video__block video__block-free">
+											<video autoplay muted loop class="video__col">
+												<source src="your-video.mp4" type="video/mp4">
+											</video>										
+											<div class="play">
+												<button type="submit" class="play__icon">
+													<img src="img/video/play.png" alt="">												
+												</button>
 
+											</div>
+										</div>
+									</div>
+									<div class="viddeo__slide swiper-slide">
+										<div class="video__block video__block-two">
+											<video autoplay muted loop class="video__col">
+												<source src="your-video.mp4" type="video/mp4">
+											</video>										
+											<div class="play">
+												<button type="submit" class="play__icon">
+													<img src="img/video/play.png" alt="">												
+												</button>
+
+											</div>
+										</div>
+									</div>
+									<div class="viddeo__slide swiper-slide">
+										<div class="video__block video__block-free">
+											<video autoplay muted loop class="video__col">
+												<source src="your-video.mp4" type="video/mp4">
+											</video>										
+											<div class="play">
+												<button type="submit" class="play__icon">
+													<img src="img/video/play.png" alt="">												
+												</button>
+
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<button type="button" class="swiper-button-prev swiper-button-prev-two  _icon-arrow"></button>
-							<button type="button" class="swiper-button-next swiper-button-next-two _icon-arrow"></button>
-							<div class="swiper-pagination "></div>
-						</div>
+								<div class="swiper-pagination viddeo-pagination swiper-pagination-video"></div>
+							</div>	
+							<button type="button" class="swiper-button-prev viddeo-button-prev swiper-button-prev-two   _icon-arrow"></button>
+							<button type="button" class="swiper-button-next viddeo-button-next swiper-button-next-two  _icon-arrow"></button>						
+						 </div>
+
 					</div>
 				</section>
 				<section class="photo">
 					<div class="photo__container">
-						<span class="span">Профессиональный фотограф</span>
+						<h5 class="span h5-hd">Профессиональный фотограф</h5>
 						<h2>Профессианольные фотографии</h2>
 						<div class="photo__col">
 							<div class="photo__col-dn">
@@ -263,7 +277,7 @@
 				</section>
 				<section class="vibor">
 					<div class="vibor__container">
-						<span class="span">выбор за вами</span>
+						<h5 class="span h5-hd">выбор за вами</h5>
 						<h2>Один из двух иглу на ваш выбор</h2>
 						<!-- Оболочка слайдера -->
 						<div class="vibor__slider swiper">
@@ -285,7 +299,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination vibor-swiper-pagination"></div>
+							<div class="vibor-pagination swiper-pagination  vibor-swiper-pagination"></div>
 						</div>
 					</div>
 				</section>
@@ -360,20 +374,26 @@
 								</div>
 							</div>
 							<!-- Если нужна пагинация -->
-							<div class="swiper-pagination"></div>
+							<div class="swiper-pagination swiper-pagination-tarif"></div>
 						</div>
 					</div>
 				</section>
 				<section class="otsiv">
 					<div class="otsiv__container">
 						<!-- Оболочка слайдера -->
-						 <span class="span">чтО О НАС ГОВОРЯТ</span>
-						 <h2>Отзывы клиентов</h2>
-						 <div class="otsiv__block">
+						<h5 class="span h5-hd">чтО О НАС ГОВОРЯТ</h5>
+						<h2>Отзывы клиентов</h2>
+						<div class="otsiv__block">
 							<div class="otsiv__slider swiper">
 								<!-- Двигающееся часть слайдера -->
 								<div class="otsiv__wrapper swiper-wrapper">
 									<!-- Слайд -->
+									<div class="otsiv__slide swiper-slide">
+										<div class="otsiv__fon"></div>
+									</div>
+									<div class="otsiv__slide swiper-slide">
+										<div class="otsiv__fon"></div>
+									</div>
 									<div class="otsiv__slide swiper-slide">
 										<div class="otsiv__fon"></div>
 									</div>
@@ -388,24 +408,25 @@
 								<div class="swiper-pagination swiper-pagination-otsiv"></div>
 							</div>	
 							
-						<button type="button" class="swiper-button-otsiv swiper-button-prev  _icon-arrow"></button>
-						<button type="button" class="swiper-button-otsiv swiper-button-next _icon-arrow"></button>						
-						 </div>
+						<button type="button" class="swiper-button-otsiv-prev swiper-button-prev-two swiper-button-prev  _icon-arrow"></button>
+						<button type="button" class="swiper-button-otsiv-next swiper-button-next-two swiper-button-next _icon-arrow"></button>						
+						</div>
 					</div>
 				</section>
-				<section class="comand">
-					<div class="comand__container">
-						<span class="span span-no">Немного о нас</span>
-						<h2>Наша команда</h2>
+				<section class="comand comand-two">
+					<img class="nas__fon" src="img/otsiv-main.png" alt="">
+					<div class="comand__container ">
+						<h5 class="span center">Немного о нас</h5>
+						<h2 class="center">Наша команда</h2>
 						<!-- Оболочка слайдера -->
-						<div class=" comand__slider-two swiper">
+						<div class="comand__slider   ">
 							<!-- Двигающееся часть слайдера -->
-							<div class="comand__wrapper swiper-wrapper">
+							<div class="swiper-wrapper">
 								<!-- Слайд -->
 								<div class="comand__slide swiper-slide">
 									<div class="comand__block">
 										<div class="comand__block-img">
-											<img src="img/comand/4.png" alt="">
+											<img src="img/comand/1.png" alt="">
 										</div>
 										<div class="comand__block-info">
 											<p>Должность</p>
@@ -416,7 +437,7 @@
 								<div class="comand__slide swiper-slide">
 									<div class="comand__block">
 										<div class="comand__block-img comand__block-img__two">
-											<img src="img/comand/5.png" alt="">
+											<img src="img/comand/2.png" alt="">
 										</div>
 										<div class="comand__block-info">
 											<p>Должность</p>
@@ -427,7 +448,7 @@
 								<div class="comand__slide swiper-slide">
 									<div class="comand__block">
 										<div class="comand__block-img">
-											<img src="img/comand/6.png" alt="">
+											<img src="img/comand/3.png" alt="">
 										</div>
 										<div class="comand__block-info">
 											<p>Должность</p>
@@ -436,12 +457,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination"></div>
-
+							<div class="swiper-pagination comand-pagination"></div>
+						</div>
+					</div>
 				</section>
-				<section class="vopros">
+				<section class="vopros vopros-two">
 					<div class="vopros__container">
-						<span class="span-no span">у вас возник вопрос?</span>
+						<h5 class="span-no span">у вас возник вопрос?</h5>
 						<h2>Часто задаваемые вопросы</h2>
 						<div >
 							<div data-spollers data-one-spoller class="spollers">
@@ -485,117 +507,102 @@
 							</div>
 							
 						</div>
-						<div class="vopros__cart">
-							<h3 class="h3-white">Остались вопросы?</h3>
-							<button type="submit" class="button btn2">Получить консультацию</button>
-						</div>
+						<section class="banner banner-two">
+							<div class="banner__container">
+								<h3>Остались вопросы?</h3>
+								<button type="submit" class="button coffe-btn" data-popup="#popup">Получить консультацию</button>
+							</div>
+						</section>
 					</div>
 				</section>
 			</main>
-		<footer class="footer">
-		<div class="footer__container">
-			<div class="footer__hd">
-				
-			</div>
-			<a href="" class="footer__logo"  data-da=".footer__hd,1003"><img src="img/footer-logo.png" alt=""></a>
-			<nav class="menu__body" data-da=".footer__hd,1003">
-				<ul class="menu__list">
-						<li class="menu__item">
-							<div data-spollers data-one-spoller  class="spollers">
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Услуги</button>
-									<div class="spollers__body">
-										<div >
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
-										</div>
-									</div>
-								</div>
-								<div class="spollers__item">
-									<button type="button" data-spoller-close data-spoller class="spollers__title _icon-arrow">Мероприятия</button>
-									<div class="spollers__body">
-										<div >
-											<a href="">Гендер пати</a>
-											<a href="">Иглу на крыше</a>
-											<a href="">Аренда инвентаря</a>
-											<a href="">Свидание на крыше</a>
-											<a href="">Свидание в кинотеатре</a>
-											<a href="">Предложение руки и сердца </a>
-										</div>
-									</div>
+
+			<footer>
+				<div class="footer__container">
+					<a href="" class="footer__logo" data-da=".footer__nav,1120"><img src="img/footer-logo.png" alt=""></a>
+					<nav class="footer__nav">
+						<ul>
+							<div class="header__spollers header__spollers-hd">
+								<button ><a href="#" class="spoller__a _icon-arrow">Услуги</a></button>
+								<div class="header__body">
+									<a href="#">Гендер пати</a>
+									<a href="#">Иглу на крыше</a>
+									<a href="">Аренда инвентаря</a>
+									<a href="">Свидание на крыше</a>								
 								</div>
 							</div>
-						</li>
-						<h4 class="footer__h4">Навигация</h4>
-					<li class="menu__item menu__item-hd">
-							<a href="">Услуги</a>
-					</li>
-					<li class="menu__item menu__item-hd">
-							<a href="">Фото</a>
-					</li>
-					<li class="menu__item">
-						<a href="">Мероприятия</a>
-					</li>
-					<li class="menu__item">
-						<a href="">Франшиза</a>
-					</li>
-					<li class="menu__item">
-						<a href="">Контакты</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="footer__soc">
-				<a href="" class="_icon-youtube"></a>
-				<a href="" class="_icon-insta"></a>
-				<a href="" class="_icon-vk"></a>
-			</div>
-		</div>
-</footer>
+							<div class="header__spollers header__spollers-hd">
+								<button ><a href="#" class="spoller__a _icon-arrow">Мероприятия</a></button>
+								<div class="header__body">
+									<a href="#">Гендер пати</a>
+									<a href="#">Иглу на крыше</a>
+									<a href="">Аренда инвентаря</a>
+									<a href="">Свидание на крыше</a>								
+								</div>
+							</div>
+							<h4>Навигация</h4>
+							<a href="#" class="item__menu-hd">Услуги</a>
+							<a href="#" class="item__menu-hd ">Мероприятия</a>
+							<a href="#">Фото</a>
+							<a href="#">Франшиза</a>
+							<a href="#">Контакты</a>
+						</ul>
+					</nav>
+					<div class="footer__icon">
+						<a href="" class="_icon-youtube"></a>
+						<a href="" class="_icon-insta"></a>
+						<a href="" class="_icon-vk"></a>
+					</div>
+				</div>
+			</footer>
 	</div>
+
+	<!-- Первый попап с формой -->
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<div class="otpravka__form">
-					<button type="submit" data-close class="close-button">
+					<!-- Кнопка для закрытия первого попапа -->
+					<button type="button" data-close class="close-button">
 						<i class="ri-close-line"></i>
 					</button>
-					<form>
-						<h3>Вы можете оставить заявку на обратный звонок</h3>
-						<label for="tel">Имя</label>
-						<input type="name" name="form[name]" placeholder="Введите ваше имя" class="input">
-
+					<h3>Вы можете оставить заявку на обратный звонок</h3>
+					<form id="myForm" method="post">
+						<label for="name">Имя</label>
+						<input type="text" name="form[name]" placeholder="Введите ваше имя" class="input">
+	
 						<label for="tel">Телефон</label>
 						<input type="tel" name="form[tel]" placeholder="Введите ваш номер телефона" class="input">
-
-						<label class="checkbox checkbox__block">
+	
+						<label class="checkbox checkbox__block popup__checkbox">
 							<input type="checkbox" class="checkbox__input">
 							<span class="checkbox__custom">
 								<i class="ri-check-line"></i>
 							</span>
-							<p>Принимаю условия политики конфиденциальности</p>
+							<p class="popup__text">Принимаю условия политики конфиденциальности</p>
 						</label>
-						<button data-popup="#popup2" type="submit" class="button">Отправить заявку</button>
+						
+						<button type="submit" class="button">Отправить заявку</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<div id="popup2" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<div class="otpravka__form otpravka__form-two">
-					<button type="submit" data-close class="close-button">
+					<!-- Кнопка для закрытия второго попапа -->
+					<button type="button" data-close class="close-button">
 						<i class="ri-close-line"></i>
 					</button>
-					<p>Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время</p>
+					<p>Спасибо! Мы получили заявку и свяжемся с вами в ближайшее время.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240820000037"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> 
+	<script src="./js/app.js"></script>
 </body>
 
 </html>
