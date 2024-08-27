@@ -732,7 +732,7 @@ if (spollersArray.length > 0) {
 
 
 
-
+document.addEventListener("DOMContentLoaded", function () {
 const openButton = document.querySelector('.button-menu__open');
 const nav = document.querySelector('.nav');
 const icon = document.querySelector('.icon-menu')
@@ -760,14 +760,14 @@ document.querySelector('.vid-fon-back__button').addEventListener('click', functi
       video1.classList.add('hidden');
       video2.classList.remove('hidden');
   }
-});
+})});
 
 
 
 
 
 
-
+document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener('load', function() {
   const video = document.querySelector('.background-video');
 
@@ -780,4 +780,4 @@ window.addEventListener('load', function() {
           video.classList.add('loaded');
       });
   }
-});
+})});
