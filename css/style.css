@@ -225,10 +225,9 @@ h5{
   color: #000000;
 }
 @media (max-width:991px){
-  .h5-hd{
-    display: none;
-  }
   h5{
+    margin-bottom: 20px;
+    font-size: 15px;
     text-align: start;
   }
 }
@@ -2049,7 +2048,8 @@ form .popup__checkbox{
   height: 100%;
   object-fit: cover; /* Видео будет растягиваться по контейнеру */
   z-index: 1;
-  opacity: 0.7; /* Прозрачность видео, если нужно */
+  transition: all 0.3s ease 0s;
+  opacity: 0; /* Прозрачность видео, если нужно */
 }
 .play{
   width: max-content;
@@ -2068,6 +2068,8 @@ form .popup__checkbox{
   background: #A22929B2;
   border-radius: 50%;
   position: relative;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -2655,6 +2657,9 @@ form .popup__checkbox{
   background-image: inherit;
   background: #F6F3E4;
 }
+.vid-cart ul p{
+  font-size: 14px;
+}
 }
 
 @media (max-width: 722px){
@@ -2663,21 +2668,173 @@ form .popup__checkbox{
     background-image: url('..//img/main-main.png');
   }
 }
+@media (max-width: 430px){
+
+  .main{
+    background-size: 430px 100%;
+  }
+}
+@media (max-width: 420px){
+  .photo__col-dn div {
+    width: 155px;
+    height: 175px;
+}
+nav{
+  padding: 0 10px 0  0;
+}
+.banner__container button {
+  font-size: 13px;
+}
+.coffe-btn {
+  padding: 8px 10px;
+}
+}
+
+
+.video-playing{
+  opacity: 1;
+}
+.button-active{
+  opacity: 0;
+}
 
 
 
-
-.background-video {
-  position: absolute;
+.video__fullscreen {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Помещаем видео под контент */
-  opacity: 0; /* Начальное состояние видео невидимое */
-
+  background-color: rgba(0, 0, 0, 0.8); /* Затемнение */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-.background-video.loaded {
-  opacity: 1; /* Делаем видео видимым после загрузки */
+
+.video__fullscreen .video__col {
+  width: 50%; /* Половина экрана */
+  left: 25%;
+  opacity: 1;
+  top: 10%;
+  height: 80vh;
+}
+
+.close-btn, .prev-btn, .next-btn {
+  position: absolute;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.close-btn {
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.prev-btn, .next-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+
+
+
+
+
+/* Стили для lightbox */
+.photolightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0D0D0D ;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.lightbox__image {
+  width: 60%;
+}
+
+.lightbox__close, .lightbox__prev, .lightbox__next {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox__close {
+  right: 20px;
+  font-size: 40px;
+  background: rgba(255, 255, 255, .3);
+  display: flex;
+  height: 40px;
+  transform: rotate(-90deg);
+  width: 40px;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 20px;
+}
+.lightbox__prev {
+  left: 20px;
+}
+
+.lightbox__next {
+  right: 20px;
+}
+
+.lightbox__prev{
+  font-size: 18px;
+  background: rgba(255, 255, 255, .3);
+  display: flex;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  transform: rotate(90deg);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.lightbox__next {
+  font-size: 18px;
+  background: rgba(255, 255, 255, .3);
+  display: flex;
+  height: 40px;
+  transform: rotate(-90deg);
+  width: 40px;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.lightbox__prev, .lightbox__next {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Класс для скрытия кнопок переключения */
+.lightbox__controls-hidden {
+  opacity: 0;
 }

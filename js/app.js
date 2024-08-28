@@ -781,3 +781,248 @@ window.addEventListener('load', function() {
       });
   }
 })});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Проверяем ширину экрана
+	if (window.innerWidth <= 991) {
+		// Находим все блоки с видео
+		document.querySelectorAll('.video__block').forEach(function(videoBlock) {
+			const video = videoBlock.querySelector('.video__col');
+			const button = videoBlock.querySelector('.play__icon');
+			const buttonContainer = videoBlock.querySelector('.play');
+
+			button.addEventListener('click', function() {
+				// Проверяем, воспроизводится ли текущее видео
+				if (video.paused) {
+					// Если видео приостановлено, запускаем его и добавляем классы только для текущего блока
+					video.play();
+					video.classList.add('video-playing');
+					buttonContainer.classList.add('button-active');
+				} else {
+					// Если видео воспроизводится, останавливаем его и удаляем классы только для текущего блока
+					video.pause();
+					video.classList.remove('video-playing');
+					buttonContainer.classList.remove('button-active');
+				}
+			});
+
+			// Добавляем клик по видео для удаления классов только у текущего элемента
+			video.addEventListener('click', function() {
+				// Останавливаем текущее видео и убираем классы
+				video.pause();
+				video.classList.remove('video-playing');
+				buttonContainer.classList.remove('button-active');
+			});
+		});
+	}
+});
+
+
+
+
+
+function initVideoScript() {
+  document.querySelectorAll('.play__icon').forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+          if (window.innerWidth <= 991) return; // Проверяем ширину экрана
+
+          const videoBlock = btn.closest('.video__container');
+          const video = videoBlock.querySelector('video');
+
+          // Удаляем класс video__col-play у всех видео
+          document.querySelectorAll('video').forEach(vid => {
+              vid.classList.remove('video__col-play');
+          });
+
+          // Добавляем класс video__col-play только к выбранному видео
+          video.classList.add('video__col-play');
+
+          // Создаем полноэкранное окно с видео
+          const fullscreenDiv = document.createElement('div');
+          fullscreenDiv.classList.add('video__main', 'video__fullscreen');
+
+          // Клонируем видео и добавляем его в полноэкранный блок
+          const videoClone = video.cloneNode(true);
+          videoClone.play();
+          fullscreenDiv.appendChild(videoClone);
+
+          // Добавляем крестик для закрытия
+          const closeBtn = document.createElement('div');
+          closeBtn.classList.add('close-btn');
+          closeBtn.innerHTML = '✖'; // Иконка крестика
+          fullscreenDiv.appendChild(closeBtn);
+
+          // Добавляем стрелки для переключения
+          const prevBtn = document.createElement('div');
+          prevBtn.classList.add('prev-btn');
+          prevBtn.innerHTML = '◀'; // Иконка стрелки
+          fullscreenDiv.appendChild(prevBtn);
+
+          const nextBtn = document.createElement('div');
+          nextBtn.classList.add('next-btn');
+          nextBtn.innerHTML = '▶'; // Иконка стрелки
+          fullscreenDiv.appendChild(nextBtn);
+
+          // Вставляем кнопку play в полноэкранный блок
+          const playBtn = document.createElement('button');
+          playBtn.type = 'button'; // Исправлено на 'button', чтобы не отправлял форму
+          playBtn.classList.add('play__icon');
+          playBtn.classList.add('button-active');  // Используем новый класс
+          playBtn.innerHTML = `<img src="img/video/play.png" alt="">`; // Добавляем иконку play
+          fullscreenDiv.appendChild(playBtn);
+
+          // Вставляем полноэкранное окно в body
+          document.body.appendChild(fullscreenDiv);
+
+          // Функция для обновления видимости стрелок
+          function updateArrowVisibility(currentIndex) {
+              const totalVideos = document.querySelectorAll('.video__block').length;
+              prevBtn.classList.toggle('hidden', currentIndex === 0);
+              nextBtn.classList.toggle('hidden', currentIndex === totalVideos - 1);
+          }
+
+          // Обработчик закрытия видео
+          closeBtn.addEventListener('click', () => {
+              videoClone.pause();
+              document.body.removeChild(fullscreenDiv);
+              video.classList.remove('video__col-play');
+              btn.closest('.play').classList.remove('button-active');
+          });
+
+          // Переключение видео
+          prevBtn.addEventListener('click', () => {
+              if (window.innerWidth <= 991) return; // Проверяем ширину экрана
+              switchVideo(index - 1);
+          });
+
+          nextBtn.addEventListener('click', () => {
+              if (window.innerWidth <= 991) return; // Проверяем ширину экрана
+              switchVideo(index + 1);
+          });
+
+          function switchVideo(newIndex) {
+              const totalVideos = document.querySelectorAll('.video__block').length;
+              if (newIndex < 0 || newIndex >= totalVideos) {
+                  return; // Выйти за пределы не позволяем
+              }
+              
+              const nextBtn = document.querySelectorAll('.play__icon')[newIndex];
+              if (nextBtn) {
+                  videoClone.pause();
+                  document.body.removeChild(fullscreenDiv);
+                  nextBtn.click();
+              }
+          }
+
+          // Добавляем воспроизведение видео при клике на иконку
+          playBtn.addEventListener('click', () => {
+              if (window.innerWidth <= 991) return; // Проверяем ширину экрана
+
+              if (videoClone.classList.contains('video__col-play')) {
+                  videoClone.pause();
+                  videoClone.classList.remove('video__col-play');
+                  playBtn.classList.remove('button-active');
+              } else {
+                  videoClone.play();
+                  videoClone.classList.add('video__col-play');
+                  playBtn.classList.add('button-active');
+              }
+          });
+
+          // Обработка клика на видео для управления классами
+          videoClone.addEventListener('click', () => {
+              if (window.innerWidth <= 991) return; // Проверяем ширину экрана
+
+              if (videoClone.classList.contains('video__col-play')) {
+                  videoClone.pause();
+                  videoClone.classList.remove('video__col-play');
+                  playBtn.classList.remove('button-active');
+              } else {
+                  videoClone.play();
+                  videoClone.classList.add('video__col-play');
+                  playBtn.classList.add('button-active');
+              }
+          });
+
+          // Обновляем видимость стрелок
+          updateArrowVisibility(index);
+      });
+  });
+}
+
+// Инициализация скрипта при загрузке страницы
+window.addEventListener('load', initVideoScript);
+
+// Перепроверка при изменении размера окна
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 991) {
+      initVideoScript(); // Переинициализируем скрипт при изменении размера окна
+  }
+});
+
+
+function initLightbox() {
+  // Назначаем обработчики событий для изображений
+  document.querySelectorAll('.photo__item img').forEach((img, index) => {
+      img.addEventListener('click', () => {
+          const lightbox = document.getElementById('photolightbox');
+          const lightboxImage = lightbox.querySelector('.lightbox__image');
+          lightboxImage.src = img.src;
+          lightbox.style.display = 'flex';
+          lightbox.setAttribute('data-current', index);
+
+          // Показать кнопки переключения
+          const prevBtn = lightbox.querySelector('.lightbox__prev');
+          const nextBtn = lightbox.querySelector('.lightbox__next');
+          prevBtn.classList.remove('lightbox__controls-hidden');
+          nextBtn.classList.remove('lightbox__controls-hidden');
+      });
+  });
+
+  // Обработчик для кнопки закрытия
+  document.querySelector('.lightbox__close').addEventListener('click', () => {
+      document.getElementById('photolightbox').style.display = 'none';
+  });
+
+  // Обработчики для кнопок переключения
+  document.querySelector('.lightbox__prev').addEventListener('click', () => {
+      const lightbox = document.getElementById('photolightbox');
+      const currentIndex = parseInt(lightbox.getAttribute('data-current'));
+      const newIndex = (currentIndex - 1 + document.querySelectorAll('.photo__item img').length) % document.querySelectorAll('.photo__item img').length;
+      const newImage = document.querySelectorAll('.photo__item img')[newIndex];
+      lightbox.querySelector('.lightbox__image').src = newImage.src;
+      lightbox.setAttribute('data-current', newIndex);
+  });
+
+  document.querySelector('.lightbox__next').addEventListener('click', () => {
+      const lightbox = document.getElementById('photolightbox');
+      const currentIndex = parseInt(lightbox.getAttribute('data-current'));
+      const newIndex = (currentIndex + 1) % document.querySelectorAll('.photo__item img').length;
+      const newImage = document.querySelectorAll('.photo__item img')[newIndex];
+      lightbox.querySelector('.lightbox__image').src = newImage.src;
+      lightbox.setAttribute('data-current', newIndex);
+  });
+
+  // Показывать кнопки переключения при наведении на lightbox
+  const lightbox = document.getElementById('photolightbox');
+  lightbox.addEventListener('mouseenter', () => {
+      const prevBtn = lightbox.querySelector('.lightbox__prev');
+      const nextBtn = lightbox.querySelector('.lightbox__next');
+      prevBtn.classList.remove('lightbox__controls-hidden');
+      nextBtn.classList.remove('lightbox__controls-hidden');
+  });
+
+  lightbox.addEventListener('mouseleave', () => {
+      // Не скрываем кнопки при выходе мыши
+      // Можно удалить этот обработчик, если не нужен
+  });
+}
+
+// Инициализация при загрузке страницы
+initLightbox();
+
+// Инициализация при изменении размера окна
+window.addEventListener('resize', initLightbox);
