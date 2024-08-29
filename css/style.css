@@ -1052,12 +1052,6 @@ top: 0;
   z-index: 1;
   margin-top: auto;
 }
-.vibe__block-dop-two{
-  width: 334px;
-}
-.vibe__block-two{
-  width: 334px;
-}
 .menu__item a{
 
     font-size: 16px;          
@@ -2660,6 +2654,18 @@ form .popup__checkbox{
 .vid-cart ul p{
   font-size: 14px;
 }
+.vibe__block-dop .vibe__img-fon {
+  width: 478px;
+  height: 360px;
+  top: -23%;
+  left: -10%;
+}
+.vibe__block-dop-two{
+  width: 235px;
+}
+.vibe__block-two{
+  width: 235px;
+}
 }
 
 @media (max-width: 722px){
@@ -2714,8 +2720,8 @@ nav{
 }
 
 .video__fullscreen .video__col {
-  width: 50%; /* Половина экрана */
-  left: 25%;
+  width: 379px;
+  left: 35%;
   opacity: 1;
   top: 10%;
   height: 80vh;
