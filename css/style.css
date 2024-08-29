@@ -2721,7 +2721,8 @@ nav{
 
 .video__fullscreen .video__col {
   width: 379px;
-  left: 35%;
+  left: auto;
+  right: auto;
   opacity: 1;
   top: 10%;
   height: 80vh;
