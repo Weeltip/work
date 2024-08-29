@@ -1820,7 +1820,7 @@ form .popup__checkbox{
 .love,
 .line-love{
   position: absolute;
-
+  z-index: -1;
 }
 .love{
   right: 12%;
